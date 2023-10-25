@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/general.css"/>
+    <link rel="stylesheet" href="../css/capitalQuiz.css"/>
+</head>
+<body>
+    <div class="score-section">
+        <div class="counters__progress">
+          <p class="counters__progress--text">Country:</p>
+          <p class="counters__progress--text"><span id="progress-count">1</span> / 5</p>
+        </div>
+        <div class="counters__score">
+          <p class="counters__score--text">Score:</p>
+          <p class="counters__score--text" id="score-count">0</p>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <p class="question-text">What is the capital of this country?</p>
+
+        <div class="countryName-div">
+            <p class="countryName" id="countryName"></p>
+        </div>
+
+        <div class="flag">
+            <img src="#" class="flag__img" id="flag" alt="country flag"/>
+        </div>
+
+        <div class="hint-div">
+            <div class="takeHint" id="takeHint">Take a Hint</div>
+            <div class="hint_content">
+                <div class="hint" id="hint">Hint : Initial is "${initial}"</div>
+            </div>
+        </div>
+        
+        <div class="answer-box-div">
+            <input type="text" class="question__input" id="question-input" Placeholder="Your Answer"/>
+        </div>
+
+        <div class="answer" id="answer-box">
+            <p class="answer__result heading-secondary" id="answer-result">Correct!!</p>
+            <p class="answer__answer heading-secondary" id="correct-answer">The correct Answer is ${Country Name}</p>
+        </div>
+
+        <div class="button-section">
+            <button class="submit-button" id="submit-button">SUBMIT</button>
+            <button class="next-button" id="next-button" disabled>NEXT</button>
+        </div>
+    </div>
+
+    <!-- END GAME / RESULTS PAGE &   MODAL -->
+    <div class="endgame">
+        <div class="endgame__modal">
+            <div class="endgame__scores">
+                <div class="endgame__scores-box">
+                    <p class="endgame__scores-box--text heading-secondary">Final Score</p>
+                    <p class="endgame__scores-box--number heading-primary" id="new-score">80</p>
+                <div class="endgame__scores-box">
+                    <p class="endgame__scores-box--text heading-secondary">High Score</p>
+                    <p class="endgame__scores-box--number heading-primary" id="high-score">80</p>
+                </div>
+            </div>
+            <div class="endgame__high-score">
+                <p class="endgame__high-score--text heading-secondary">New High Score!</p>
+            </div>
+            <div class="endgame__buttons">
+                <button class="endgame__buttons--btn btn" id="play-again">Play Game Again</button>
+                <a href="../index.html" class="endgame__buttons--btn btn">Exit Game</a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/restapi_capital.js"></script>
+</body>
+</html>

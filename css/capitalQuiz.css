@@ -1,0 +1,127 @@
+.score-section{
+    background-color: white;
+    margin: 40px 50px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.main-section{
+    background-color: white;
+    margin:30px 100px 30px 100px;
+    border-radius: 10px;
+    padding:30px
+}
+
+.question-text{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+}
+
+.countries{
+    margin:auto;
+    align-items: center;
+}
+
+.flag{
+    display: flex;
+    justify-content: center;
+}
+
+.flag img{
+    border: 1px solid  black;
+}
+
+.countryName-div{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(9, 0, 79);
+}
+
+.hint-div{
+  text-align: center;
+  cursor: pointer;
+}
+
+.hint_content{
+  display: none;
+}
+
+.answer-box-div{
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.question__input{
+    width: 100%;
+    line-height: 3;
+    font-size: 130%;
+}
+
+.answer p{
+  font-size: 30px;
+  text-align: center;
+}
+
+.button-section{
+    display: flex;
+    justify-content: center;
+}
+
+
+.submit-button,
+.next-button{
+    padding:20px 40px 20px 40px;
+    background-color: rgb(0, 0, 66);
+    color: white;
+    border-radius: 50px;
+    border: none;
+    margin: 20px 20px 20px 20px;
+    cursor: pointer;
+}
+
+button:disabled{
+  background-color: rgb(106, 106, 128);
+}
+
+
+/* ========== ENDGAME / MODAL STYLING ========== */
+.endgame {
+  display: none;
+  position: absolute;
+  /*  backdrop filter code from https://css-tricks.com/almanac/properties/b/backdrop-filter/ */
+  backdrop-filter: blur(2px);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*  ========== MODAL ELEMENT STYLING ========== */
+  .endgame__modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: fixed;
+  /* @include absCenter; */
+  width: 90%;
+  max-width: 900px;
+  height: 50rem;
+  max-height: 80%;
+  /*  Add a glass effect to end game modal */
+  
+  border: solid 2px white;
+  z-index: 10;
+  /* @include respond(tablet) {
+    height: 65rem;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  @include respond(desktop) {
+    height: 80rem;
+  }
+  @include respond(big-desktop) {
+    height: 70rem;
+    max-width: 1400px;
+  } */
+} 
