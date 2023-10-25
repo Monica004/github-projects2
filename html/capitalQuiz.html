@@ -6,20 +6,24 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/general.css"/>
-    <link rel="stylesheet" href="../css/capitalQuiz.css"/>
+    <link rel="stylesheet" href="../css/quiz.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-------------------------------- Score Section --------------------------------->
     <div class="score-section">
         <div class="counters__progress">
-          <p class="counters__progress--text">Country:</p>
+          <p class="counters__progress--text">Country:&nbsp;</p>
           <p class="counters__progress--text"><span id="progress-count">1</span> / 5</p>
         </div>
         <div class="counters__score">
-          <p class="counters__score--text">Score:</p>
+          <p class="counters__score--text">Score:&nbsp;</p>
           <p class="counters__score--text" id="score-count">0</p>
         </div>
     </div>
-
+<!-------------------------------- Main Section --------------------------------->
     <div class="main-section">
         <p class="question-text">What is the capital of this country?</p>
 
@@ -32,9 +36,9 @@
         </div>
 
         <div class="hint-div">
-            <div class="takeHint" id="takeHint">Take a Hint</div>
+            <p class="takeHint" id="takeHint">Click here to take a Hint!</p>
             <div class="hint_content">
-                <div class="hint" id="hint">Hint : Initial is "${initial}"</div>
+                <p class="hint" id="hint">Hint : Initial is "${initial}"</p>
             </div>
         </div>
         
@@ -53,20 +57,18 @@
         </div>
     </div>
 
-    <!-- END GAME / RESULTS PAGE &   MODAL -->
+<!-------------------------------- End Game --------------------------------->
     <div class="endgame">
         <div class="endgame__modal">
             <div class="endgame__scores">
                 <div class="endgame__scores-box">
-                    <p class="endgame__scores-box--text heading-secondary">Final Score</p>
+                    <p class="endgame__scores-box--text heading-secondary">Final Score:&nbsp;</p>
                     <p class="endgame__scores-box--number heading-primary" id="new-score">80</p>
+                </div>  
                 <div class="endgame__scores-box">
-                    <p class="endgame__scores-box--text heading-secondary">High Score</p>
+                    <p class="endgame__scores-box--text heading-secondary">High Score:&nbsp;</p>
                     <p class="endgame__scores-box--number heading-primary" id="high-score">80</p>
                 </div>
-            </div>
-            <div class="endgame__high-score">
-                <p class="endgame__high-score--text heading-secondary">New High Score!</p>
             </div>
             <div class="endgame__buttons">
                 <button class="endgame__buttons--btn btn" id="play-again">Play Game Again</button>
@@ -74,6 +76,7 @@
             </div>
         </div>
     </div>
+<!-------------------------------- js --------------------------------->
     <script src="../js/restapi_capital.js"></script>
 </body>
 </html>

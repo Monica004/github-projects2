@@ -1,0 +1,166 @@
+/* ----------------------------- Score section ----------------------------- */
+.score-section{
+    background-color: white;
+    margin: 15px 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between
+}
+
+.counters__progress,
+.counters__score{
+  display: flex;
+  margin: 10px;
+}
+
+/* ----------------------------- Main section ----------------------------- */
+.main-section{
+    background-color: white;
+    margin:30px 100px 30px 100px;
+    border-radius: 10px;
+    padding:30px
+}
+
+.question-text{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+}
+
+.countries{
+    margin:auto;
+    align-items: center;
+}
+
+.flag{
+    display: flex;
+    justify-content: center;
+}
+
+.flag img{
+    border: 1px solid  black;
+}
+
+.answer-box-div{
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.question__input{
+    width: 400px;
+    line-height: 3;
+    font-size: 110%;
+    font-family: Asap, Arial, Helvetica, sans-serif;
+    box-shadow:0px 0px 2px 0.5px rgba(139, 139, 139, 0.5) inset;
+    border-radius: 5px;
+}
+
+.answer p{
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.button-section{
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button,
+.next-button{
+    padding:20px 40px 20px 40px;
+    background-color: rgb(0, 0, 66);
+    color: white;
+    border-radius: 50px;
+    border: none;
+    margin: 20px 20px 20px 20px;
+    cursor: pointer;
+    font-family: Asap, Arial, Helvetica, sans-serif;
+}
+
+button:disabled{
+  background-color: rgb(106, 106, 128);
+}
+
+/* ----------------------------- For Capital Quiz ----------------------------- */
+.countryName-div{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(20, 2, 158);
+}
+
+.hint-div{
+  text-align: center;
+  cursor: pointer;
+  margin-top: 30px;
+  color: rgb(94, 94, 94);
+}
+
+.hint_content{
+  display: none;
+}
+
+/* ----------------------------- End game ----------------------------- */
+.endgame {
+  display: none;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+
+.endgame__modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 90%;
+  max-width: 900px;
+  height: 50rem;
+  max-height: 80%;
+  background-color: rgb(106, 106, 128);
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  border: solid 2px white;
+  z-index: 10;
+} 
+
+.endgame__scores-box{
+  display: flex;
+}
+
+.endgame__buttons--btn{
+  margin: 100px auto;
+  padding:20px 40px 20px 40px;
+  font-size: 15px;
+  font-family: Asap, Arial, Helvetica, sans-serif;
+  background-color: white;
+  border: black;
+  border-radius: 10px;
+  color: rgb(0, 0, 66);
+  text-decoration: none;
+}
+
+
+/* ----------------------------- responsive ----------------------------- */
+@media screen and (max-width: 750px) {
+  .score-section{
+    margin: 10px;
+  }
+
+  .main-section{
+    margin: 10px;
+  }
+
+  .question__input{
+    width: 250px;
+  }
+
+  .endgame__modal {
+    display: block;
+  } 
+}
+

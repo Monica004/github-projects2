@@ -1,3 +1,5 @@
+/* ----------------------------- title ----------------------------- */
+
 .title{
     display: flex;
     justify-content: center;
@@ -15,17 +17,37 @@ p{
     color: white;
 }
 
+
+
+/* ----------------------------- button ----------------------------- */
 .category{
     display: flex;
+    justify-content: space-evenly;
 }
 
 button{
     display: block;
-    margin: 100px auto;
+    margin-top: 100px;
     padding:20px 40px 20px 40px;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     border: black;
     border-radius: 10px;
+    width: 300px;
+}
+
+
+/* ----------------------------- responsive ----------------------------- */
+@media screen and (max-width: 750px) {
+    .title-img{
+        display: none;
+    }
+
+    .category{
+        display: block;
+    }
+
+    button{
+        margin: 30px auto;
+    }
 }

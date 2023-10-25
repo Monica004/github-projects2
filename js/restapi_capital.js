@@ -1,3 +1,4 @@
+// --------------------------Variable--------------------------
 const progressCount = document.getElementById("progress-count");
 const scoreCount = document.getElementById("score-count");
 const countryName = document.getElementById("countryName");
@@ -71,13 +72,10 @@ function getAnswers(list) {
       if (translation && !names.includes(translation.common.toLowerCase())) names.push(translation.common.toLowerCase());
     }
     //return an answer array of 5 subarrays in format:
-    // [names answers, capital answer, population answer]
     answers.push([names, country.capital[0].toLowerCase()]);
   }
   return answers;
 }
-
-
 
 function playQuiz() {
   //Function to check answers array for next country and slice name, capital and population from next country
@@ -91,7 +89,6 @@ function playQuiz() {
     playCountry(currentCountry);
   }
 }
-
 
 // Function to take the 3 answers array for each country and start the round
 function playCountry(answers) {
@@ -186,7 +183,6 @@ function submitAnswer(answer, displayAnswer) {
   answerInput.addEventListener("keydown", inputFunc);
 
   // Store functionality in separate function to avoid stacking answer checks
-  // Source for this solution: Eloquent JavaScript, Chapter 14
   function inputFunc() {
     
     answerInput.addEventListener(
@@ -305,9 +301,6 @@ function scoreCheck() {
     // then save new score
     localStorage.setItem("savedHighScore", score);
     highScore.textContent = score;
-    // change text to High Score or Perfect Score if 100 points
-    highScoreText.textContent = score === 100 ? "Perfect Score!!!" : "New High Score!!";
-    highScoreText.setAttribute("style", "display: block");
   }
   else
   {
