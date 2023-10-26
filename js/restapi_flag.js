@@ -36,7 +36,7 @@ fetch("https://restcountries.com/v3.1/all")
   console.log(correctAnswers);
 
 
-//display countryList
+//get countryList
 function selectCountries(list) {
     let newList = [];
     while (newList.length < 5)
@@ -74,7 +74,7 @@ function getAnswers(list) {
 
 
 function playQuiz() {
-  //Function to check answers array for next country and slice name, capital and population from next country
+  //Function to check answers array for next country and slice name
   if (!correctAnswers.length)
   {
     endGame();
@@ -180,7 +180,6 @@ function submitAnswer(answer, displayAnswer) {
     // Submit button functionality
     submitButton.addEventListener("click", submitFunc);
 
-    // Store another separate submitAnswer function that can be removed from *both* text input and submit button eventListeners, as only one of them will be used
     function submitFunc() {
       currentAnswer = answerInput.value.trim();
       isCorrect(answer);
@@ -269,7 +268,6 @@ function scoreCheck() {
   }
 }
 
-// Function to play the game again under the current Region / Difficulty settings
 function playGameAgain() {
   playAgain.addEventListener(
     "click",

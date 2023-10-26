@@ -45,7 +45,7 @@ xhttp.send();
   
 
 
-//display countryList
+//get countryList
 function selectCountries(list) {
     let newList = [];
     while (newList.length < 5)
@@ -56,7 +56,7 @@ function selectCountries(list) {
     return newList;
 }
 
-// Define function to get list of correct answers from the 5 selected countries for each game
+// Define function to get list of correct answers from the 5 selected countries
 function getAnswers(list) {
   let answers = [];
   for (let country of list) {
@@ -78,7 +78,7 @@ function getAnswers(list) {
 }
 
 function playQuiz() {
-  //Function to check answers array for next country and slice name, capital and population from next country
+  //Function to check answers array for next country and slice name and capital
   if (!correctAnswers.length)
   {
     endGame();
@@ -90,7 +90,6 @@ function playQuiz() {
   }
 }
 
-// Function to take the 3 answers array for each country and start the round
 function playCountry(answers) {
   getFlag(answers);
   getCountryNameAndHint(answers);
